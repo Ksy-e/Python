@@ -31,3 +31,13 @@ search = input('Введите искомый текст: ')
 text=text.split(search)
 print(text)
 print(len(text)-1)
+
+#или
+text = 'Напишите программу, в которой пользователь будет задавать две строки'
+search = input('Введите искомый текст: ')
+count=0
+for i in range(len(text)):
+    if search.lower() == text[i:i+len(search)].lower():
+            count += 1
+
+print(f'В заданном тексте подстрока {search} встерчается {count} раз')
