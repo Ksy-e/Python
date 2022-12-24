@@ -6,4 +6,5 @@ n =int(input('Введите число: '))
 my_dict={}
 for key in range(1, n+1):
     my_dict[key]=3*key+1
+print(f'При n={n}', end=' ')
 print(my_dict)
