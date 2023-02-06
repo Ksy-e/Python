@@ -7,3 +7,9 @@ for digit in num:
     if digit.isdigit():
         sum += int(digit)
 print(f'Сумма цифр числа {num} равна {sum}')
+
+#с использованием средств ускоренной обработки данных
+
+num = input('Введите число: ')
+summa = sum(list(map(int,[digit for digit in num if digit.isdigit()])))
+print(f'Сумма цифр числа {num} равна {summa}')
