@@ -10,7 +10,7 @@ async def mes_help(message: Message):
                          f'Играют два игрока делая ход друг после друга.\n'
                          f'За один ход можно забрать от 1 до 28 конфет.\n '
                          f'Кто заберёт последние выигрывает.\n'
-                         f'Чтобы задать стартовое количество конфет на столе введи /set и через пробел число.')
+                         f'Чтобы изменить стартовое количество конфет на столе введи /set и через пробел число.')
 
 @dp.message_handler(commands=['set'])
 async def mes_set(message: Message):
@@ -32,7 +32,7 @@ async def mes_start(message: Message):
         await message.answer(f'Привет, {message.from_user.full_name}. '
                              f'Давай поиграем в конфетки. На столе 150 конфет. Бери от 1 до 28...\n'
                              f'Если не знаешь правила, нажми /help \n'
-                             f'Чтобы задать стартовое количество конфет на столе введи /set  и через пробел число.')
+                             f'Чтобы изменить стартовое количество конфет на столе введи /set  и через пробел число.')
         my_game = [message.from_user.id, message.from_user.first_name, max_total]
         game.total.append(my_game)
 
